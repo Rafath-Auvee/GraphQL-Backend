@@ -1,25 +1,8 @@
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer, gql } = require("apollo-server");
+const { typeDefs } = require("./schema/type-defs.js");
 
+const server = new ApolloServer({ typeDefs, resolvers });
 
-
-// The GraphQL schema
-const typeDefs = gql`
-  type Query {
-    "A simple type for getting started!"
-    hello: String
-  }
-`;
-
-// A map of functions which return data for the schema.
-const resolvers = {
-  Query: {
-    hello: () => 'world',
-  },
-};
-
-const server = new ApolloServer({typeDefs, resolvers});
-
-server.listen().then(() =>{
+server.listen().then(() => {
   console.log("first server is running");
-})
-
+});
