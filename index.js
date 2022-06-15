@@ -1,8 +1,8 @@
 const { ApolloServer, gql } = require("apollo-server");
-const { typeDefs } = require("./schema/type-defs.js");
-
+const { typeDefs } = require("./schema/type-defs");
+const { resolvers } = require("./schema/resolvers");
 const server = new ApolloServer({ typeDefs, resolvers });
 
-server.listen().then(() => {
-  console.log("first server is running");
+server.listen().then(({ url }) => {
+  console.log(`first server is running ${url}`);
 });

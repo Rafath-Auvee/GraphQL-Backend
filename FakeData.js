@@ -1,4 +1,4 @@
-export const UserList = [
+const UserList = [
   {
     id: 1,
     name: "Hildy Bearman",
@@ -7000,3 +7000,5 @@ export const UserList = [
     age: 27,
   },
 ];
+
+module.export = {UserList}
