@@ -9,7 +9,7 @@ const typeDefs = gql`
     nationality: String!
   }
   type Query {
-    users: [User!]!
+    users: [User]
   }
 `;
 

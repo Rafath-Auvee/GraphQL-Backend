@@ -7001,4 +7001,4 @@ const UserList = [
   },
 ];
 
-module.export = {UserList}
+module.exports = {UserList}
